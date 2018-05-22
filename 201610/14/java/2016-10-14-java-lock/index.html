@@ -32,7 +32,7 @@
 <meta name="keywords" content="sixtrees, 牛中超, hexo, gitpages, 博客, 个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="总线锁和缓存锁">
-<meta property="og:url" content="http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/index.html">
+<meta property="og:url" content="http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/index.html">
 <meta property="og:site_name" content="shugenniu&#39;s blogger">
 <meta property="og:description" content="JAVA并发编程的艺术之总线锁和缓存锁">
 <meta property="og:locale" content="default">
@@ -133,7 +133,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -179,7 +179,7 @@
     </aside>
 
 
-<article id="post-java/2016-10-14-总线索和缓存锁"
+<article id="post-java/2016-10-14-java-lock"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -217,12 +217,12 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2017-12-13T11:08:20.000Z" itemprop="dateUpdated">2017-12-13 19:08:20</time>
+    Last updated: <time datetime="2017-12-13T11:08:20.000Z" itemprop="dateUpdated">2017-12-13 19:08:20</time>
 </span><br>
 
 
         
-        版权链接：<a href="/201610/14/java/2016-10-14-总线索和缓存锁/" target="_blank" rel="external">http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/</a>
+        版权链接：<a href="/201610/14/java/2016-10-14-java-lock/" target="_blank" rel="external">http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/</a>
         
     </div>
     
@@ -251,7 +251,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&title=《总线锁和缓存锁》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&title=《总线锁和缓存锁》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -261,22 +261,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&title=《总线锁和缓存锁》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&title=《总线锁和缓存锁》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总线锁和缓存锁》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&via=http://www.wanqing520.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总线锁和缓存锁》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&via=http://www.wanqing520.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -299,7 +299,7 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/201610/14/git/2016-10-14-使用processon来分享创作的图片/" id="post-prev" class="post-nav-link">
+      <a href="/201610/14/git/2016-10-14-share_photo_on_processon/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">使用https://www.processon.com来分享创作的图片</h4>
       </a>
@@ -403,7 +403,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -427,7 +427,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&title=《总线锁和缓存锁》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&title=《总线锁和缓存锁》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -437,22 +437,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&title=《总线锁和缓存锁》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&title=《总线锁和缓存锁》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总线锁和缓存锁》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/&via=http://www.wanqing520.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总线锁和缓存锁》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/&via=http://www.wanqing520.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-总线索和缓存锁/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -463,7 +463,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACq0lEQVR42u3aQW7jMBAEwPz/07vA3vZguXuGTAykdDJkQmLJgDju4ddXfPz5dzyfefXt8+fkOsnI1YGHh4c3mvqrYzbddiqvrvk85nnOeHh4eLd5+eVmY149snZ5yOeMh4eH9wm8hJRMAg8PD+/38J5f7vvw4pmKh4eH92m8JIxIIoa8aE6ihLwcP5C14OHh4cW8Tcz6U58v9vfw8PDwFl31TZmbl9rJ+dmBh4eHd4PXBgezsrsNLPLtC9GygYeHh3eU114oDwtOBbWryBgPDw/vAm/2/myne3bS+aKFh4eHd4P3XJLOSHkx/UxK5vbmZ8DDw8O7wGsL6Nnk9ktL3pxb7WXAw8PDC8bkW5pmEUN7nVmTbBjj4uHh4S14m60AbQutvVe+wLz5x4CHh4d3gZeHuXkAkS8q+wg4inHx8PDwDvHycKEd+bU4Zo8GDw8P7zYvx8y+bZOBTRBcPC08PDy8NW9fBLfLQF6m5wFx3QbDw8PDG/E27avZS3wT1LaxBR4eHt5tXjvpTWGdTHT2uP87j4eHh3eBl4cLbYNqNpViW0Cw+QAPDw/vNi9vQeXt/FNbAdq2HB4eHt738zav+zb2zb/Nly48PDy8e7x9I6rt15+Nd4tiGg8PD+8obxY3tC/r9qU/eyjFb4KHh4e34LUv+n0MMbt7va0BDw8P7wJvtkVgtkgkmLbgjv4S4OHh4R3l7SeUF8r5+HbxePO74eHh4V3m5e2u4jbBHWetuCJrwcPDwzvEy4/ZBqw2Mm7L69kjxsPDw9vz8uhhVpTnkWu+fSFvj+Hh4eHd4+Uv/c35fTutLdPx8PDwfpbXjpnFuEkIUpTaeHh4eB/M27fE8iCj2IaFh4eHd43XbrHahwXtdJPFAA8PD+97eLMGWDvp/fjNxiw8PDy8Q7y/sRJzqLHWI4gAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQW7DMAwF0dz/0u62RWplPmkHMDVaFYkt6aUAQZF6vfA4fo33z9fPn731/u3Z85cNGTJkPJZxLAffFsF3YOs9yJAhYwfG2SbOnll/QrbC313vTYYMGTLSqVMMeUuGDBky+gE33VxnXRkyZOzMSDfBS3IkQayFaRkyZOzD4FX37/99S39DhgwZj2Ic4bijkZAedP+ZWYYMGaMZnbSPNCM7jYQ4DZUhQ8ZQRhpM+RWuzuUMfjBGv7EMGTJGMPjyaYmNzNxpbf4JuDJkyBjKIF+nhXiePtbePZ1HhgwZQxn9QhjfbquUtg7cMmTIGM1It7guinUuanTCrgwZMnZgkMJ9//k+Hq0oQ4aMoQye0vGFawlfrUgnQ4aM2Yw48cJLpgG6k3rKkCFjB0atxZgW0XhRj/9wMmTI2IFxVUORh+D04lfxsoUMGTIGMfhlrKvajTz4xqFWhgwZoxkk/NUuQJCDKE9D456GDBkyRjA6Za/aifJD4Qwnlx/+JzJkyBjKqE13VVCuXcKIuxwyZMh4OINst3PxolP6R2/JkCFjG0at0VhrIRBekPvJkCFjKOMIx31pYieIy5AhYzaDj/TwyQv9taDMZ5MhQ8YMBg+ynTYkP6ame5AhQ8Y+DB74eBuyVqpLr7LJkCFDRo2UNkTTVW6sGsqQIWMco9Mw6ATZiwOuDBkyHsKoNQNIqO0cj4OQLUOGjNEMHvLSoyk/gpJA3AnZMmTIeCzjB0QsYL7tmSvIAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
