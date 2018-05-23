@@ -1,4 +1,128 @@
-<header class="top-header" id="header">
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=65854487"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>2016-10-12-Spring MV异步请求 | shugenniu&#39;s blogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Spring MV异步请求&quot;">
+<meta name="keywords" content="sixtrees, 牛中超, hexo, gitpages, 博客, 个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016-10-12-Spring MV异步请求">
+<meta property="og:url" content="http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html">
+<meta property="og:site_name" content="shugenniu&#39;s blogger">
+<meta property="og:description" content="Spring MV异步请求&quot;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-13T11:08:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016-10-12-Spring MV异步请求">
+<meta name="twitter:description" content="Spring MV异步请求&quot;">
+    
+        <link rel="alternate" type="application/atom+xml" title="shugenniu&#39;s blogger" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sixtrees</h5>
+          <a href="mailto:zcniu1314@hotmail.com" title="zcniu1314@hotmail.com" class="mail">zcniu1314@hotmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/sixtrees" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/u010570551" target="_blank" >
+                <i class="icon icon-lg icon-csdn"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
@@ -69,6 +193,13 @@
 
 
             
+
+
+    <span id="{{ url_for(post.path) }}" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i> <span>{{__('post.visitors')}}</span>
+    </span>
+
+
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="第22章-异步请求"><a href="#第22章-异步请求" class="headerlink" title="第22章 异步请求"></a>第22章 异步请求</h1><p>Servlet3.0规范新增了对异步请求的支持，Spring MVC也在此基础上对异步请求提供了方便。异步请求是在处理比较耗时的业务时先将request返回，然后另起线程处理耗时的业务，处理完后再返回给用户。</p>
@@ -435,3 +566,252 @@
 
 
 </div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>sixtrees &copy; 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17008452号-2</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html&title=《2016-10-12-Spring MV异步请求》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html&title=《2016-10-12-Spring MV异步请求》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2016-10-12-Spring MV异步请求》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3a0W4qMQwE0P7/T7evV7pimbGTikpnnxBQyKFS7B3n6yu+voPr/3f++8yrz3x+Jn91deHh4eEdXfqrRe+ff/X5z3+brxkPDw/vNu95I35+fKpIvFzi4xreWPDw8PA+gHfqmWdMUkjw8PDw/gov2dzrRZQkPDw8vE/gJc1xnpfOAojk8y9mLXh4eHgxL58ifc7jK/M9PDw8vEMHAmYjrlnJacdjbz4fDw8P7wJv0y4nsFNRRdt24+Hh4d3jbbbgtvlO3p9HvVFxwsPDw7vAmw23koZ4kwxs0obh742Hh4dX8tph2KyNzkdrSQiSFwk8PDy827wD2UbcOh8Y+e8HY3h4eHgj3v6wVBu8tm33ZsCGh4eHd4M320XzdjlvzWcxx/COAQ8PD2/BmwUK7WY9a5GP1T08PDy8o7zZDX9bGPIy0Ia5myADDw8Pr+VtysCpEHb/7S/BeHh4eBd49dA92HVnJSEJGtrvwsPDw7vBy1vbTYiQL33TakeTPTw8PLw1ry0MeTvbxq+z9jr6djw8PLwLvHYElX/B7NDVrGwUa8bDw8M7yssj1H1E2/6gh8+U4eHh4S14s0HX7Gjp7NVZ1IuHh4d3m7cPJpKAdXbgoA2C8fDw8H6Hly9uFsXmo7LNoas3KTUeHh7eZd5srDU7HJAXjAPRLR4eHt5RXr755uOr2fh/8w+ITpbh4eHhrXntaH9zpGAf+BbhBR4eHt5R3nd5zWKI5+FZHtrWbTceHh7eBd7syFRyp38qsGijh1khwcPDw2t5eTFoG+v80EB7nKs4mIWHh4d3jbcZNSULat85u/Dw8PA+k5cMvWaBbB5bFIUKDw8P7wN4eSTRFon2+EIU7OLh4eFd482Oq8429/bHaoMPPDw8vNu89iZ/Fi7kW/wmAj6QYeDh4eE98X4ALeOHXB5C2mIAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'shugenniu的博客';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'shugenniu的博客';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+    
+        <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("{{theme.leancloud_visitors.app_id}}", "{{theme.leancloud_visitors.app_key}}");</script>
+<script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $(".leancloud_visitors").each(function() {
+            var url = $(this).attr("id").trim();
+            query.equalTo("url", url);
+            query.find({
+                success: function(results) {
+                    if (results.length == 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log("Error: " + error.code + " " + error.message);
+                }
+            });
+
+        });
+    }
+
+    function addCount(Counter) {
+        var Counter = AV.Object.extend("Counter");
+        url = $(".leancloud_visitors").attr('id').trim();
+        title = $(".leancloud_visitors").attr('data-flag-title').trim();
+        var query = new AV.Query(Counter);
+        query.equalTo("url", url);
+        query.find({
+            success: function(results) {
+                if (results.length > 0) {
+                    var counter = results[0];
+                    counter.fetchWhenSave(true);
+                    counter.increment("time");
+                    counter.save(null, {
+                        success: function(counter) {
+                            var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                            $(document.getElementById(url)).text(content);
+                        },
+                        error: function(counter, error) {
+                            console.log('Failed to save Visitor num, with error message: ' + error.message);
+                        }
+                    });
+                } else {
+                    var newcounter = new Counter();
+                    newcounter.set("title", title);
+                    newcounter.set("url", url);
+                    newcounter.set("time", 1);
+                    newcounter.save(null, {
+                        success: function(newcounter) {
+                            console.log("newcounter.get('time')="+newcounter.get('time'));
+                            var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                            $(document.getElementById(url)).text(content);
+                        },
+                        error: function(newcounter, error) {
+                            console.log('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error) {
+                console.log('Error:' + error.code + " " + error.message);
+            }
+        });
+    }
+    $(function() {
+        var Counter = AV.Object.extend("Counter");
+        if ($('.leancloud_visitors').length == 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+    
+</body>
+</html>

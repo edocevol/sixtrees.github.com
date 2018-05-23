@@ -1,4 +1,128 @@
-<header class="top-header" id="header">
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=65854487"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Java FAQ | shugenniu&#39;s blogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="转载自：http://www.lrj.name/post-show/id/555486b80da7d80000000001">
+<meta name="keywords" content="sixtrees, 牛中超, hexo, gitpages, 博客, 个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java FAQ">
+<meta property="og:url" content="http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html">
+<meta property="og:site_name" content="shugenniu&#39;s blogger">
+<meta property="og:description" content="转载自：http://www.lrj.name/post-show/id/555486b80da7d80000000001">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-13T11:08:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java FAQ">
+<meta name="twitter:description" content="转载自：http://www.lrj.name/post-show/id/555486b80da7d80000000001">
+    
+        <link rel="alternate" type="application/atom+xml" title="shugenniu&#39;s blogger" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sixtrees</h5>
+          <a href="mailto:zcniu1314@hotmail.com" title="zcniu1314@hotmail.com" class="mail">zcniu1314@hotmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/sixtrees" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/u010570551" target="_blank" >
+                <i class="icon icon-lg icon-csdn"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
@@ -69,6 +193,13 @@
 
 
             
+
+
+    <span id="{{ url_for(post.path) }}" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i> <span>{{__('post.visitors')}}</span>
+    </span>
+
+
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="1-String、StringBuffer-和-StringBuilder-的区别："><a href="#1-String、StringBuffer-和-StringBuilder-的区别：" class="headerlink" title="1.String、StringBuffer 和 StringBuilder 的区别："></a>1.String、StringBuffer 和 StringBuilder 的区别：</h2><p>String：不可变字符串； String 字符串的 + 法实际是生成了新的 String 对象，如果频繁滴有 + 操作，那么效率可能会很差；<br>StringBuffer：线程安全的可变字符串； 使用 append 来进行连接 + 操作， 如果频繁有字符串 + 操作，应该采用；<br>StringBuilder：非线程安全的可变字符串；如果频繁有字符串 +，那么可以采用，效率比 StringBuffer 会高那么一点，但注意是非线程安全的；<br>String.intern()方法： 将字符串对应值放到常量区。</p>
@@ -281,3 +412,252 @@
 
 
 </div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>sixtrees &copy; 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17008452号-2</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html&title=《Java FAQ》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html&title=《Java FAQ》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java FAQ》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACv0lEQVR42u3a0WrDMAwF0P3/T2+wp4126b2ynTI4eSqliX1csBVJHx/x9fl9/fX55/V4V3I9Pvl63M0XHh4e3mjq7cB/TeLxmcn3+VLmc8bDw8M7zUuGSabb3nUNTqgvLHh4eHhv5eV3tUuWHBV4eHh4/5HXpiHaMHp2SODh4eG9i5ckI5Kjok1h5OMez7Xg4eHhxbz1Atj9n2+t7+Hh4eGNSvtFCBsnHdYLXS9mi4eHh3eAN0vRtt/nrVTtEkTHBh4eHt5WXgLLkw55wiIP3GcJ4l/nHh4eHt5h3qx1IN/Q2zRHG9w/eWPAw8PDu5HXphXWkw4rR8iThcbDw8M7zNvVJpUnLPJR8j+gXwM8PDy8yW/aLX5WHmuTuS2j+A/x8PDwFnhtW8B12jRvdZ2NlYfsTzoj8PDw8DbxklC1DYXbw2NX+rgeCw8PD2/Em6VcW2QeKK8vGR4eHt6dvOQRu1K0bZA9O6Lw8PDwTvCuX/LbwWbheBtwtzPHw8PDO8ebbd9tgWp2tfP89Us8PDy8A7z8hvZBu0poyTGwlJ/Gw8PD2/TmfmKKyRPyUL5t28LDw8Pby5sV6fN7V8LuZKHx8PDw7uQlm+8sWXCNTKL7WcMBHh4e3mleu323m3jeMrWSII7eFfDw8PCWeW1CYaW9oA3Q2yOneEvAw8PDO8xbL1MlSdtZwvfFk/Hw8PAO8PLtvi1WtSWxdiZ5cwMeHh7eXl479TYIzo+EfCZFqgIPDw/vMC8vdK0Xq/LGgmQhXiQj8PDw8Lby8mvvFK8Pp7yo1pbK8PDw8Hbx2oaqNgRvlylPRkQFMzw8PLxjvJXD4HoJ1tsIVtq/8PDw8N7LW3nTbyc6m1vUeoWHh4d3Oy8vU7Ub/cpzth0MeHh4eDFvpTmgHnKh3NWG73h4eHgneCsFsJyUFLryUTbU9PDw8PAmvC+J+sU6AREe9gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'shugenniu的博客';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'shugenniu的博客';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+    
+        <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("{{theme.leancloud_visitors.app_id}}", "{{theme.leancloud_visitors.app_key}}");</script>
+<script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $(".leancloud_visitors").each(function() {
+            var url = $(this).attr("id").trim();
+            query.equalTo("url", url);
+            query.find({
+                success: function(results) {
+                    if (results.length == 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log("Error: " + error.code + " " + error.message);
+                }
+            });
+
+        });
+    }
+
+    function addCount(Counter) {
+        var Counter = AV.Object.extend("Counter");
+        url = $(".leancloud_visitors").attr('id').trim();
+        title = $(".leancloud_visitors").attr('data-flag-title').trim();
+        var query = new AV.Query(Counter);
+        query.equalTo("url", url);
+        query.find({
+            success: function(results) {
+                if (results.length > 0) {
+                    var counter = results[0];
+                    counter.fetchWhenSave(true);
+                    counter.increment("time");
+                    counter.save(null, {
+                        success: function(counter) {
+                            var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                            $(document.getElementById(url)).text(content);
+                        },
+                        error: function(counter, error) {
+                            console.log('Failed to save Visitor num, with error message: ' + error.message);
+                        }
+                    });
+                } else {
+                    var newcounter = new Counter();
+                    newcounter.set("title", title);
+                    newcounter.set("url", url);
+                    newcounter.set("time", 1);
+                    newcounter.save(null, {
+                        success: function(newcounter) {
+                            console.log("newcounter.get('time')="+newcounter.get('time'));
+                            var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                            $(document.getElementById(url)).text(content);
+                        },
+                        error: function(newcounter, error) {
+                            console.log('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error) {
+                console.log('Error:' + error.code + " " + error.message);
+            }
+        });
+    }
+    $(function() {
+        var Counter = AV.Object.extend("Counter");
+        if ($('.leancloud_visitors').length == 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+    
+</body>
+</html>
