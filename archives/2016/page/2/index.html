@@ -464,27 +464,9 @@ MathJax.Hub.Queue(function() {
 
 
 
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = 'shugenniu的博客';
-            clearTimeout(titleTime);
-        } else {
-            document.title = 'shugenniu的博客';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
-
-    
-        <!-- custom analytics part create by xiamo -->
+    <!-- custom analytics part create by xiamo -->
 <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
 <script>AV.initialize("{{theme.leancloud_visitors.app_id}}", "{{theme.leancloud_visitors.app_key}}");</script>
 <script>
@@ -567,6 +549,27 @@ MathJax.Hub.Queue(function() {
     });
 </script>
 
-    
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'shugenniu的博客';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'shugenniu的博客';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
 </body>
 </html>
