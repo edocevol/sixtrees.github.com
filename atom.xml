@@ -18,8 +18,8 @@
   
   <entry>
     <title>乐享开发指南</title>
-    <link href="http://www.wanqing520.cn/201805/22/%E6%9D%82%E8%B0%88/%E4%B9%90%E4%BA%AB%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"/>
-    <id>http://www.wanqing520.cn/201805/22/杂谈/乐享开发指南/</id>
+    <link href="http://www.wanqing520.cn/201805/22/%E6%9D%82%E8%B0%88/%E4%B9%90%E4%BA%AB%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.html"/>
+    <id>http://www.wanqing520.cn/201805/22/杂谈/乐享开发指南.html</id>
     <published>2018-05-22T14:11:28.426Z</published>
     <updated>2018-05-22T14:25:51.490Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>blog-migration</title>
-    <link href="http://www.wanqing520.cn/201805/22/blog-migration/"/>
-    <id>http://www.wanqing520.cn/201805/22/blog-migration/</id>
+    <link href="http://www.wanqing520.cn/201805/22/blog-migration.html"/>
+    <id>http://www.wanqing520.cn/201805/22/blog-migration.html</id>
     <published>2018-05-22T13:26:53.000Z</published>
     <updated>2018-05-22T13:35:40.840Z</updated>
     
@@ -60,8 +60,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.wanqing520.cn/201805/22/hello-world/"/>
-    <id>http://www.wanqing520.cn/201805/22/hello-world/</id>
+    <link href="http://www.wanqing520.cn/201805/22/hello-world.html"/>
+    <id>http://www.wanqing520.cn/201805/22/hello-world.html</id>
     <published>2018-05-22T13:15:39.091Z</published>
     <updated>2018-05-22T13:34:56.308Z</updated>
     
@@ -83,8 +83,8 @@
   
   <entry>
     <title>java爬取80s电影网站的视频信息</title>
-    <link href="http://www.wanqing520.cn/201610/31/java/2016-10-31-use-java-spide-80movies-information/"/>
-    <id>http://www.wanqing520.cn/201610/31/java/2016-10-31-use-java-spide-80movies-information/</id>
+    <link href="http://www.wanqing520.cn/201610/31/java/2016-10-31-use-java-spide-80movies-information.html"/>
+    <id>http://www.wanqing520.cn/201610/31/java/2016-10-31-use-java-spide-80movies-information.html</id>
     <published>2016-10-30T16:58:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -103,8 +103,8 @@
   
   <entry>
     <title>博客由github迁移到gitosc</title>
-    <link href="http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages/"/>
-    <id>http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages/</id>
+    <link href="http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html"/>
+    <id>http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html</id>
     <published>2016-10-17T09:47:00.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>Java FAQ</title>
-    <link href="http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems/"/>
-    <id>http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems/</id>
+    <link href="http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html"/>
+    <id>http://www.wanqing520.cn/201610/15/java/2016-10-15-some-java-problems.html</id>
     <published>2016-10-15T03:46:00.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -143,8 +143,8 @@
   
   <entry>
     <title>使用https://www.processon.com来分享创作的图片</title>
-    <link href="http://www.wanqing520.cn/201610/14/git/2016-10-14-share_photo_on_processon/"/>
-    <id>http://www.wanqing520.cn/201610/14/git/2016-10-14-share_photo_on_processon/</id>
+    <link href="http://www.wanqing520.cn/201610/14/git/2016-10-14-share_photo_on_processon.html"/>
+    <id>http://www.wanqing520.cn/201610/14/git/2016-10-14-share_photo_on_processon.html</id>
     <published>2016-10-14T09:47:00.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -163,8 +163,8 @@
   
   <entry>
     <title>总线锁和缓存锁</title>
-    <link href="http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/"/>
-    <id>http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock/</id>
+    <link href="http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock.html"/>
+    <id>http://www.wanqing520.cn/201610/14/java/2016-10-14-java-lock.html</id>
     <published>2016-10-14T04:03:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -183,8 +183,8 @@
   
   <entry>
     <title>2016-10-13-如果打印机不能连接</title>
-    <link href="http://www.wanqing520.cn/201610/13/%E6%9D%82%E8%B0%88/2016-10-13-intranet-printer/"/>
-    <id>http://www.wanqing520.cn/201610/13/杂谈/2016-10-13-intranet-printer/</id>
+    <link href="http://www.wanqing520.cn/201610/13/%E6%9D%82%E8%B0%88/2016-10-13-intranet-printer.html"/>
+    <id>http://www.wanqing520.cn/201610/13/杂谈/2016-10-13-intranet-printer.html</id>
     <published>2016-10-13T08:57:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -203,8 +203,8 @@
   
   <entry>
     <title>2016-10-12-Spring MV异步请求</title>
-    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest/"/>
-    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest/</id>
+    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html"/>
+    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-SpringMVC-async-reuest.html</id>
     <published>2016-10-12T08:58:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -223,8 +223,8 @@
   
   <entry>
     <title>2016-10-12-ThinkPHP集成万象优图</title>
-    <link href="http://www.wanqing520.cn/201610/12/php/2016-10-12-thinkphp-combine-tencent-cos/"/>
-    <id>http://www.wanqing520.cn/201610/12/php/2016-10-12-thinkphp-combine-tencent-cos/</id>
+    <link href="http://www.wanqing520.cn/201610/12/php/2016-10-12-thinkphp-combine-tencent-cos.html"/>
+    <id>http://www.wanqing520.cn/201610/12/php/2016-10-12-thinkphp-combine-tencent-cos.html</id>
     <published>2016-10-12T06:58:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -243,8 +243,8 @@
   
   <entry>
     <title>Neil | RequestToViewNameTranslator</title>
-    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-RequestToViewNameTranslator/"/>
-    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-RequestToViewNameTranslator/</id>
+    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-RequestToViewNameTranslator.html"/>
+    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-RequestToViewNameTranslator.html</id>
     <published>2016-10-12T06:45:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -263,8 +263,8 @@
   
   <entry>
     <title>Neil | 牛中超--B507实验室打印机连接</title>
-    <link href="http://www.wanqing520.cn/201610/12/%E6%9D%82%E8%B0%88/2016-10-12-intranter-printer/"/>
-    <id>http://www.wanqing520.cn/201610/12/杂谈/2016-10-12-intranter-printer/</id>
+    <link href="http://www.wanqing520.cn/201610/12/%E6%9D%82%E8%B0%88/2016-10-12-intranter-printer.html"/>
+    <id>http://www.wanqing520.cn/201610/12/杂谈/2016-10-12-intranter-printer.html</id>
     <published>2016-10-12T06:13:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -283,8 +283,8 @@
   
   <entry>
     <title>Neil | 牛中超--易企秀如何开启伪静态支持？ 一秀如何开启伪静态</title>
-    <link href="http://www.wanqing520.cn/201610/12/php/2016-10-12-yiqixiu-use-php-rewrite/"/>
-    <id>http://www.wanqing520.cn/201610/12/php/2016-10-12-yiqixiu-use-php-rewrite/</id>
+    <link href="http://www.wanqing520.cn/201610/12/php/2016-10-12-yiqixiu-use-php-rewrite.html"/>
+    <id>http://www.wanqing520.cn/201610/12/php/2016-10-12-yiqixiu-use-php-rewrite.html</id>
     <published>2016-10-12T06:03:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -303,8 +303,8 @@
   
   <entry>
     <title>Neil | 牛中超--R使用北京的镜像</title>
-    <link href="http://www.wanqing520.cn/201610/12/bigdata/2016-10-12-R-Using-China-Source/"/>
-    <id>http://www.wanqing520.cn/201610/12/bigdata/2016-10-12-R-Using-China-Source/</id>
+    <link href="http://www.wanqing520.cn/201610/12/bigdata/2016-10-12-R-Using-China-Source.html"/>
+    <id>http://www.wanqing520.cn/201610/12/bigdata/2016-10-12-R-Using-China-Source.html</id>
     <published>2016-10-12T06:03:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -323,8 +323,8 @@
   
   <entry>
     <title>Neil | 牛中超--R简介</title>
-    <link href="http://www.wanqing520.cn/201610/12/bigdata/simple_use_of_R/"/>
-    <id>http://www.wanqing520.cn/201610/12/bigdata/simple_use_of_R/</id>
+    <link href="http://www.wanqing520.cn/201610/12/bigdata/simple_use_of_R.html"/>
+    <id>http://www.wanqing520.cn/201610/12/bigdata/simple_use_of_R.html</id>
     <published>2016-10-12T06:03:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -343,8 +343,8 @@
   
   <entry>
     <title>Neil | 牛中超--OutofMemory in Action</title>
-    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-OutofMemory-in-Action/"/>
-    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-OutofMemory-in-Action/</id>
+    <link href="http://www.wanqing520.cn/201610/12/java/2016-10-12-OutofMemory-in-Action.html"/>
+    <id>http://www.wanqing520.cn/201610/12/java/2016-10-12-OutofMemory-in-Action.html</id>
     <published>2016-10-12T06:03:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -363,8 +363,8 @@
   
   <entry>
     <title>Neil | 牛中超--Pseudo-class（伪类）、Pseudo-Element（伪元素）简要记录</title>
-    <link href="http://www.wanqing520.cn/201605/03/java/2016-4-29-Pseudo-class-Pseudo-Element/"/>
-    <id>http://www.wanqing520.cn/201605/03/java/2016-4-29-Pseudo-class-Pseudo-Element/</id>
+    <link href="http://www.wanqing520.cn/201605/03/java/2016-4-29-Pseudo-class-Pseudo-Element.html"/>
+    <id>http://www.wanqing520.cn/201605/03/java/2016-4-29-Pseudo-class-Pseudo-Element.html</id>
     <published>2016-05-03T08:47:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -383,8 +383,8 @@
   
   <entry>
     <title>Neil | 牛中超--Git 简单使用说明</title>
-    <link href="http://www.wanqing520.cn/201512/14/git/2015-12-14-instruction-Git/"/>
-    <id>http://www.wanqing520.cn/201512/14/git/2015-12-14-instruction-Git/</id>
+    <link href="http://www.wanqing520.cn/201512/14/git/2015-12-14-instruction-Git.html"/>
+    <id>http://www.wanqing520.cn/201512/14/git/2015-12-14-instruction-Git.html</id>
     <published>2015-12-13T16:47:14.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
@@ -403,8 +403,8 @@
   
   <entry>
     <title>Neil | 牛中超--UED团队前端自动化构建环境的搭建</title>
-    <link href="http://www.wanqing520.cn/201512/10/fontend/2015-12-18-The-front-end-code-build-automated-build-environment/"/>
-    <id>http://www.wanqing520.cn/201512/10/fontend/2015-12-18-The-front-end-code-build-automated-build-environment/</id>
+    <link href="http://www.wanqing520.cn/201512/10/fontend/2015-12-18-The-front-end-code-build-automated-build-environment.html"/>
+    <id>http://www.wanqing520.cn/201512/10/fontend/2015-12-18-The-front-end-code-build-automated-build-environment.html</id>
     <published>2015-12-09T16:00:00.000Z</published>
     <updated>2017-12-13T11:08:20.000Z</updated>
     
