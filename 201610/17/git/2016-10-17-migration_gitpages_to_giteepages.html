@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=65854487"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>博客由github迁移到gitosc | shugenniu&#39;s blogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="博客由github迁移到gitosc">
+<meta name="keywords" content="sixtrees, 牛中超, hexo, gitpages, 博客, 个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客由github迁移到gitosc">
+<meta property="og:url" content="http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html">
+<meta property="og:site_name" content="shugenniu&#39;s blogger">
+<meta property="og:description" content="博客由github迁移到gitosc">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/141339_de545004_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/142231_61307442_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/142325_440dce29_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/142819_63c55c06_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/142905_d996628b_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/142953_493b61b1_461425.png">
+<meta property="og:image" content="http://git.oschina.net/uploads/images/2016/1018/143028_44ff32a8_461425.png">
+<meta property="og:updated_time" content="2017-12-13T11:08:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客由github迁移到gitosc">
+<meta name="twitter:description" content="博客由github迁移到gitosc">
+<meta name="twitter:image" content="http://git.oschina.net/uploads/images/2016/1018/141339_de545004_461425.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="shugenniu&#39;s blogger" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sixtrees</h5>
+          <a href="mailto:zcniu1314@hotmail.com" title="zcniu1314@hotmail.com" class="mail">zcniu1314@hotmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/sixtrees" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/u010570551" target="_blank" >
+                <i class="icon icon-lg icon-csdn"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">博客由github迁移到gitosc</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">博客由github迁移到gitosc</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-10-17T09:47:00.000Z" itemprop="datePublished" class="page-time">
+  2016-10-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/git/">git</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在git-oschina-net上新建项目"><span class="post-toc-number">1.</span> <span class="post-toc-text">在git.oschina.net上新建项目</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#从空的项目拉取到本地"><span class="post-toc-number">2.</span> <span class="post-toc-text">从空的项目拉取到本地</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#拷贝文件文件"><span class="post-toc-number">3.</span> <span class="post-toc-text">拷贝文件文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#修改-config-yml"><span class="post-toc-number">4.</span> <span class="post-toc-text">修改_config.yml</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提交代码"><span class="post-toc-number">5.</span> <span class="post-toc-text">提交代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#add"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">add</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#commit"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">commit</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#push"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">push</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#几点说明"><span class="post-toc-number">6.</span> <span class="post-toc-text">几点说明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#致谢"><span class="post-toc-number">7.</span> <span class="post-toc-text">致谢</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-git/2016-10-17-migration_gitpages_to_giteepages"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">博客由github迁移到gitosc</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-10-17 17:47:00" datetime="2016-10-17T09:47:00.000Z"  itemprop="datePublished">2016-10-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/git/">git</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="在git-oschina-net上新建项目"><a href="#在git-oschina-net上新建项目" class="headerlink" title="在git.oschina.net上新建项目"></a>在git.oschina.net上新建项目</h1><p>如下图所示，创建一个项目，项目名为自己的开源中国的个性域名的名字（我的是<code>jsper</code>）,我这里的项目已经存在了<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/141339_de545004_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure></p>
+<h1 id="从空的项目拉取到本地"><a href="#从空的项目拉取到本地" class="headerlink" title="从空的项目拉取到本地"></a>从空的项目拉取到本地</h1><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Administrator<span class="meta">@XB</span><span class="number">-201606171743</span> MINGW64 <span class="regexp">/d/</span>牛中超个人文件<span class="regexp">/nodejs/</span>gitpages/backup</span><br><span class="line">$ pwd</span><br><span class="line"><span class="regexp">/d/</span>牛中超个人文件<span class="regexp">/nodejs/</span>gitpages/backup</span><br><span class="line"></span><br><span class="line">Administrator<span class="meta">@XB</span><span class="number">-201606171743</span> MINGW64 <span class="regexp">/d/</span>牛中超个人文件<span class="regexp">/nodejs/</span>gitpages/backup</span><br><span class="line">$ git clone <span class="string">https:</span><span class="comment">//git.oschina.net/jsper/jsper.git</span></span><br></pre></td></tr></table></figure>
+<h1 id="拷贝文件文件"><a href="#拷贝文件文件" class="headerlink" title="拷贝文件文件"></a>拷贝文件文件</h1><p>将github的<code>https://github.com/sixtrees/sixtrees.github.com.git</code>项目拷贝到本地</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/142231_61307442_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure>
+<p>复制除<code>.git</code>文件夹外的所有内容，到刚才从<code>OSC GIT</code>上拷贝下来的空项目目录中<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/142325_440dce29_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure></p>
+<h1 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改<code>_config.yml</code></h1><p>修改<code>_config.yml</code>要做的工作很少，项目在github上能够很好的运行的话，这里只需要添加一项配置</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gems: <span class="string">[jekyll-paginate]</span></span><br></pre></td></tr></table></figure>
+<h1 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h1><h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
+<h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">"迁移"</span></span><br></pre></td></tr></table></figure>
+<h2 id="push"><a href="#push" class="headerlink" title="push"></a>push</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure>
+<p>#开启pages<br>如下图所示，在项目主页，选择<code>Pages</code>选项卡，<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/142819_63c55c06_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure></p>
+<p>如下图所示，这里可以选择master分支，方便提交<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/142905_d996628b_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure></p>
+<p>点击<code>启动</code>按钮，最后的内容如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/142953_493b61b1_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure>
+<p>访问<code>http://jsper.oschina.io</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://git.oschina.net/uploads/images/2016/1018/143028_44ff32a8_461425.png" alt="输入图片说明" title="在这里输入图片标题">
+                </div>
+                <div class="image-caption">在这里输入图片标题</div>
+            </figure>
+<h1 id="几点说明"><a href="#几点说明" class="headerlink" title="几点说明"></a>几点说明</h1><ol>
+<li>如果想使用<code>http://username.oschina.io/</code>来访问自己的博客，那个项目名就必须是自己<code>username</code></li>
+<li><code>_config.yml</code>必须添加<code>gems: [jekyll-paginate]</code>配置，否则将找不到<code>_post</code>文件夹下的<code>md</code>文章</li>
+<li>pages采用<code>jekyll</code>支持，想了解更多内容，看这里：<a href="http://jekyll.com.cn/" target="_blank" rel="noopener">jekyll中文站点</a></li>
+</ol>
+<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>感谢开源中国的开源精神，想迁移博客到osc上的目的，就是osc的md文件可以直接复制图片，不需要考虑图片的上传问题，很方便有木有。在博客的迁移过程中，非常感谢 <strong>温家成</strong> （<code>http://git.oschina.net/wenjiachengy</code>）的帮助。下面是<code>issue</code>的路径<br><a href="http://git.oschina.net/oschina/git-osc/issues/5277#note_483947" target="_blank" rel="noopener">http://git.oschina.net/oschina/git-osc/issues/5277#note_483947</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-13T11:08:20.000Z" itemprop="dateUpdated">2017-12-13 19:08:20</time>
+</span><br>
+
+
+        
+        版权链接：<a href="/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html" target="_blank" rel="external">http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html</a>
+        <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.wanqing520.cn">
+            <img src="/img/avatar.jpg" alt="sixtrees">
+            sixtrees
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&title=《博客由github迁移到gitosc》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&title=《博客由github迁移到gitosc》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《博客由github迁移到gitosc》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/201610/31/java/2016-10-31-use-java-spide-80movies-information.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">java爬取80s电影网站的视频信息</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/201610/15/java/2016-10-15-some-java-problems.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Java FAQ</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div style="text-align:center">如果没有github账号，请邮件联系~~~</div>
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'sixtrees',
+            repo: 'sixtrees.github.com',
+            oauth: {
+                client_id: '651c0703fd0f7a653339',
+                client_secret: 'f97e51b5beaf2a65f63ffb745c94514023b91415',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+                    </span>
+            
+        </p>
+        <p><span>sixtrees &copy; 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17008452号-2</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a
+                    href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&title=《博客由github迁移到gitosc》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&title=《博客由github迁移到gitosc》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《博客由github迁移到gitosc》 — shugenniu's blogger&url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201610/17/git/2016-10-17-migration_gitpages_to_giteepages.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJElEQVR42u3aQW7CQAwF0N7/0lTqtkrybQMi5mVVVZCZNxtj//n5iZ/H33P09//n/A3Jm8/XSt78hAcbGxv7JuzH6ZNs7nXHdIQ832e0CjY2NvY6drL1pNjkh1WFVVe8MGJjY2N/Jbu6ZK805lvHxsbGxu4VsPNWJN/cBIyNjY2N3Ssz1YNIDugVA6wnz9KwsbGxP549D3o/5++35tvY2NjYH8B+FJ98rN+LeKuXch6tBxsbG3sT+3wM1LtGU208esUpDxgOd4WNjY29gp3/0E82OhrftEi992BjY2NvYldH8NWwNr/EM68v+erY2NjYm9i9Qc/8cmS1dZm0K4VkGxsbG/vm7OTnfnLJJmlXqmOmXiRwKMXGxsZexJ6/dBItJFtMDmtSdLGxsbF3s6v/7zUeCSnHJ4eCjY2NvYldLQ/zhfNWp3olqBAMY2NjY69j937iV1uL3vgpL4H5nrGxsbE3sfOLNdUC09t6UpaqNejw0LGxsbHXsfOF80KVb6JXrpICiY2Njb2bXW0MqhdxenHvPL69+C42Njb2Inb+urw56cW0+eWhPDa4OCBsbGzsRez5FZz8P73mYcJO4mFsbGzs+7KTlyabm1yjydetNjwXQyVsbGzsRezqBZpqlNsrY9VIoLA6NjY29iJ29VpML+itjoqSdmIyxsLGxsbex64ObqqDp6SNyePbeRnDxsbG3sfuXXl5fxg8GiRVp1/Y2NjYN2TnbUPSPPRy5rxE9cJpbGxs7N3s+SDpuWOjpMHojZ+wsbGxN7GfG9Mm7UQCq46KkgcbGxt7KzsZxyewXtzbg1UP9CLoxcbGxr45uzrEmRS5vG2YNyfR/AwbGxt7EbtXivKSNrkAlIcQhc9gY2Njr2NPRjPV0Ld3Vag30rrovbCxsbFXsCcbyktgtdXpRcu9oBobGxt7B7tXtKrlbT76n8fM2NjY2LvZvaA3KXjVVqH3mWpjg42Njf2d7Lxg5OCkQ8qD4bxRwcbGxv5m9mSjvSC59903zcmwsbGxP4adjIp6n5wEBnls3Cxg2NjY2CvY88s0r9hW9apQNeTAxsbGXsH+BdqwEoWlTlQNAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'shugenniu的博客';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'shugenniu的博客';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
