@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+<!-- Tencent Speed -->
+<script>var _speedMark = new Date()</script>
+<!-- End Tencent Speed -->
+<!-- Tencent Analysis -->
+<script async src="//tajs.qq.com/stats?sId=65854487"></script>
+<!-- End Tencent Analysis -->
+
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>nodejs下利用parallel从redis中pop多个数据 | shugenniu&#39;s blogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="场景描述 redis nodejs的api没有提供pop多个元素的指令  redis的smember函数没有办法移除要pop出去的元素，且高并发下可能存在问题  使用 async.parallel来实现多个任务并列执行，最终可以一次性得到所有结果  避免了nodejs异步编程中无法实现for循环+异步的问题   1234567891011121314151617181920212223242526">
+<meta name="keywords" content="sixtrees, 牛中超, hexo, gitpages, 博客, 个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs下利用parallel从redis中pop多个数据">
+<meta property="og:url" content="http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html">
+<meta property="og:site_name" content="shugenniu&#39;s blogger">
+<meta property="og:description" content="场景描述 redis nodejs的api没有提供pop多个元素的指令  redis的smember函数没有办法移除要pop出去的元素，且高并发下可能存在问题  使用 async.parallel来实现多个任务并列执行，最终可以一次性得到所有结果  避免了nodejs异步编程中无法实现for循环+异步的问题   1234567891011121314151617181920212223242526">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-24T06:04:19.770Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodejs下利用parallel从redis中pop多个数据">
+<meta name="twitter:description" content="场景描述 redis nodejs的api没有提供pop多个元素的指令  redis的smember函数没有办法移除要pop出去的元素，且高并发下可能存在问题  使用 async.parallel来实现多个任务并列执行，最终可以一次性得到所有结果  避免了nodejs异步编程中无法实现for循环+异步的问题   1234567891011121314151617181920212223242526">
+    
+        <link rel="alternate" type="application/atom+xml" title="shugenniu&#39;s blogger" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sixtrees</h5>
+          <a href="mailto:zcniu1314@hotmail.com" title="zcniu1314@hotmail.com" class="mail">zcniu1314@hotmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/sixtrees" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/u010570551" target="_blank" >
+                <i class="icon icon-lg icon-csdn"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">nodejs下利用parallel从redis中pop多个数据</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">nodejs下利用parallel从redis中pop多个数据</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-04-23T08:45:41.000Z" itemprop="datePublished" class="page-time">
+  2018-04-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/frontend/">frontend</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景描述"><span class="post-toc-number">1.</span> <span class="post-toc-text">场景描述</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-fontend/nodejs/nodejs-redis-popall"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">nodejs下利用parallel从redis中pop多个数据</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-04-23 16:45:41" datetime="2018-04-23T08:45:41.000Z"  itemprop="datePublished">2018-04-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/frontend/">frontend</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><ul>
+<li><p>redis nodejs的api没有提供pop多个元素的指令</p>
+</li>
+<li><p>redis的smember函数没有办法移除要pop出去的元素，且高并发下可能存在问题</p>
+</li>
+<li><p>使用 async.parallel来实现多个任务并列执行，最终可以一次性得到所有结果</p>
+</li>
+<li><p>避免了nodejs异步编程中无法实现<code>for循环+异步的问题</code></p>
+</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'/pictures_list'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res, next)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> app_id = req.body.app_id; <span class="comment"># 获取redis的key</span></span><br><span class="line">    client.scard(app_id, <span class="function"><span class="keyword">function</span> <span class="params">(error, data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">            res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/json'</span>);</span><br><span class="line">            res.json(JSON.stringify(&#123;<span class="string">'url'</span>: datas&#125;))</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	        <span class="comment">//得到redis中appid对应的Set集合中的元素数量，将其全部pop出来</span></span><br><span class="line">            <span class="keyword">var</span> tasks = create_task(data, app_id);</span><br><span class="line">            <span class="comment">// 创建num个pop任务，将num个任务parallel执行，result中的结果是</span></span><br><span class="line">            <span class="comment">//num个pop任务得到的结果</span></span><br><span class="line">            async.parallel(tasks, <span class="function"><span class="keyword">function</span> <span class="params">(error, result)</span> </span>&#123;</span><br><span class="line">                res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/json'</span>);</span><br><span class="line">                res.json(JSON.stringify(&#123;<span class="string">'url'</span>: result&#125;));</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* count是要pop出来的数量</span></span><br><span class="line"><span class="comment">* app_id是redis的Set的key</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">create_task</span><span class="params">(count, app_id)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> tasks = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">        tasks[i] = <span class="function"><span class="keyword">function</span> <span class="params">(num)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(callback)</span> </span>&#123;</span><br><span class="line">                client.spop(app_id, <span class="function"><span class="keyword">function</span> <span class="params">(error, datas)</span> </span>&#123;</span><br><span class="line">                    callback(<span class="keyword">null</span>, datas);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tasks;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-24T06:04:19.770Z" itemprop="dateUpdated">2018-05-24 14:04:19</time>
+</span><br>
+
+
+        
+        版权链接：<a href="/201804/23/fontend/nodejs/nodejs-redis-popall.html" target="_blank" rel="external">http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html</a>
+        <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.wanqing520.cn">
+            <img src="/img/avatar.jpg" alt="sixtrees">
+            sixtrees
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&title=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&title=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/201805/22/hello-world.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/201610/31/java/2016-10-31-use-java-spide-80movies-information.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">java爬取80s电影网站的视频信息</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div style="text-align:center">如果没有github账号，请邮件联系~~~</div>
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'sixtrees',
+            repo: 'sixtrees.github.com',
+            oauth: {
+                client_id: '651c0703fd0f7a653339',
+                client_secret: 'f97e51b5beaf2a65f63ffb745c94514023b91415',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+                    </span>
+            
+        </p>
+        <p><span>sixtrees &copy; 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17008452号-2</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a
+                    href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&title=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&pic=http://www.wanqing520.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&title=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&source=shugen使用hexo搭建的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《nodejs下利用parallel从redis中pop多个数据》 — shugenniu's blogger&url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html&via=http://www.wanqing520.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.wanqing520.cn/201804/23/fontend/nodejs/nodejs-redis-popall.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACpElEQVR42u3a22pCMRAFUP//py30qdB63HOJWlh5Eopp1ggnc3Zyu8Xj/j0eff45km/l81zPvzbw8PDwWkt/NCaLS4r1e4brteVrxsPDwzvNyzeD6lZxXazrolx/KykcHh4e3nt5yVKSolwXK5kNDw8P77/wTpRj/hkPDw/vXbykCe5FA8mYx7sLWQseHh5ezJsfgL3+80vP9/Dw8PDiLSF/oOcN7nWAu7zZ4OHh4R3gJUdQ1YOx3sH/VlFuSbqMh4eHN+Dtvt7nW0UOG4XCeHh4eAd4k2VdP+7z6wLzdvzJ+vHw8PBWefkDN/lnvWtVvfS1GePi4eHhHeCVG9biBlAtaL4JPQlw8fDw8JZ4eUCQPI6rW0jSRk+KiIeHh3eCl9egUK3ioqvtcqGxxsPDw3shr0etzjAJcCM8Hh4e3jFe/vJfDVsLSwlKUy4cHh4e3mFe3uz2Hv3V5fYCZTw8PLzTvPlbfP7XatDQm3M5pMDDw8MLePNgd2vO3YADDw8Pb5fXa52rDXHv0lWvmY5uRuDh4eENeHkse+4SVW8zSBp6PDw8vBO8/LCq+s+qTXmvNS/8bnh4eHhjXtIWVzGTuCEvQYTEw8PDO8wrn5K1LlGdOO56+DPg4eHhHeBVA4X8klMvzJ1cqMLDw8N7Ja8aB8yvAky2ol7bjYeHh7fLq8ajk4AgP2ArXw5Iwlw8PDy8VV6PVL1oVW1/J7EIHh4e3gnevTi2FpeXMj8k++NbeHh4eAd4W/HEbXXk1LWV4OHh4RV5+WaQH03Nw4W1Bh0PDw/vGK/3gO4dblWb+MnWhYeHh/dpvPwx3ZutVyA8PDy8z+FNkMnSR4xHFjw8PLxjvOpFqOTYaRfTjIzx8PDwDvB6r/rJ0nvF6l0jWPiF8fDw8J7zvgBc9iIWS/0wsgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'shugenniu的博客';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'shugenniu的博客';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
